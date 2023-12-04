@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dragon Ball Online</title>
+    <link rel="stylesheet" href="./src/css/output.css">
+    <link rel="stylesheet" href="./src/css/style.css">
+    <script defer src="./src/js/script.js"></script>
+    <script src="https://kit.fontawesome.com/c58c6cbca2.js" crossorigin="anonymous"></script>
+  </head>
+  <body class="md:bg-mainBg md:bg-fixed md:bg-top md:bg-no-repeat md:bg-[#04467a]">
+
+    
+    <header class="flex w-full md:h-[170px] h-[70px] fixed top-0 z-10">
+      
+      <nav class="flex md:flex-col items-center max-md:flex-row top-0 w-full h-full max-md:justify-between max-md:px-5 place-items-center md:justify-start py-2 md:bg-bgTop md:bg-cover max-md:border-b-2 max-md:border-orange-800 max-md:p-4 bg-center bg-top max-md:bg-orangeDB">
+        
+        <ul class="flex max-md:hidden">
+          <li class="border-r-white border-r-2 px-4"><a class="uppercase text-yellow-400 transition-all duration-300 font-bold" href="#">Inicio</a></li>
+          <li class="border-r-white border-r-2 px-4"><a class="uppercase hover:text-yellow-400 transition-all duration-300 font-bold text-white" href="#">Registro</a></li>
+          <li class="border-r-white border-r-2 px-4"><a class="uppercase hover:text-yellow-400 transition-all duration-300 font-bold text-white" href="#">Mapa Interactivo</a></li>
+          <li class="px-4"><a class="uppercase font-bold text-white hover:text-yellow-400 transition-all duration-300" href="#">Eventos</a></li>
+        </ul>
+  
+        <a href="#">
+          <img class="max-md:w-[100px] max-md:h-auto md:relative md:top-[30px] md:w-[272px] md:h-[101px]" src="./src/img/logo.png" alt="">
+        </a>
+
+        <input type="checkbox" id="navToggle" class="peer hidden">
+        <label for="navToggle" class="bg-btnOpen peer-checked:bg-btnClose text-orange-900 bg-center cursor-pointer transition-all bg-cover h-[30px] w-[30px]"></label>
+
+        <!-- Menú responsive -->
+        <div id="navToggle" class="peer-checked:translate-x-0 transition-transform translate-x-full w-[250px] max-[600px]:w-full md:hidden h-full bg-orangeDB z-30 p-3 fixed right-0 top-[70px] border-l-2 border-orange-800">    
+          <ul class="flex flex-col gap-2">
+            <li class="bg-white hover:bg-yellow-300 transition-all duration-300 rounded-full border-2 border-orange-800 relative">
+              <a class="text-md font-bold uppercase px-5 py-2 block inset-0 w-full h-full" href="#">Inicio</a>
+            </li>
+            <li class="bg-white hover:bg-yellow-300 transition-all duration-300 rounded-full border-2 border-orange-800 relative">
+              <a class="text-md font-bold uppercase px-5 py-2 block inset-0 w-full h-full" href="#">Registro</a>
+            </li>
+            <li class="bg-white hover:bg-yellow-300 transition-all duration-300 rounded-full border-2 border-orange-800 relative">
+              <a class="text-md font-bold uppercase px-5 py-2 block inset-0 w-full h-full" href="#">Mapa interactivo</a>
+            </li>
+            <li class="bg-white hover:bg-yellow-300 transition-all duration-300 rounded-full border-2 border-orange-800 relative">
+              <a class="text-md font-bold uppercase px-5 py-2 block inset-0 w-full h-full" href="#">Eventos</a>
+            </li>
+          </ul>
+    
+          <h2 class="text-center py-2 text-xl font-bold text-gray-800">Otras opciones</h2>
+    
+          <aside class="flex flex-1 flex-col max-md:mt-2 gap-3">
+                
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-green-600 uppercase font-bold border-[3px] border-green-800 rounded-md text-white p-4 transition-all duration-300 hover:bg-green-800 hover:border-green-900 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-download"></i></span>
+              <span>Descarga</span>
+            </a>
+    
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-yellow-500 uppercase font-bold border-[3px] border-yellow-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-circle-info"></i></span>
+              <span>Guías</span>
+            </a>
+    
+            <a href="#" class="group text-right flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-purple-500 uppercase font-bold border-[3px] border-purple-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-purple-700 hover:border-purple-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+              <span class=" text-[11px]">Herramientas</span>
+            </a>
+    
+            <a href="#" class="group flex text-right flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-red-500 uppercase font-bold border-[3px] border-red-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-red-700 hover:border-red-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-bug"></i></span>
+              <span class="text-[11px]">Reporte de bugs</span>
+            </a>
+    
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-cyan-500 uppercase font-bold border-[3px] border-cyan-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-cyan-700 hover:border-cyan-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-users"></i></span>
+              <span>Foro</span>
+            </a>
+    
+          </aside>
+    
+        </div>
+        <!-- Fin de menú responsive -->
+
+      </nav>
+
+    </header>
+
+    <main class="w-full max-md:h-[calc(100vh-70px)] md:h-[calc(100vh-170px)] relative top-[70px] md:top-[390px] md:max-w-5xl md:mx-auto">
+      
+      <div class=" md:bg-white/20 md:p-3 md:w-full h-auto md:rounded-xl md:mx-auto">
+
+        <div class="grid md:grid-cols-[minmax(170px,20%)_auto_20%] max-md:grid-cols-[30%_auto] max-sm:grid-cols-1 md:gap-3 sm:gap-2 bg-white md:rounded-ss-xl md:rounded-se-xl md:p-3 max-md:p-2 w-full h-full md:mx-auto">
+          
+          <aside class="flex flex-col gap-2 max-sm:order-2">
+  
+            <div class="flex flex-col justify-between overflow-hidden text-left bg-orangeDB border-2 border-orange-800 shadow-md w-full h-[100px] rounded">
+              
+              <div class="flex flex-col p-2">
+                <span class="text-white">¡Hola, <a class="cursor-pointer" href="#">Carlos</a>!</span>
+                <span class="text-white">Créditos: <strong>2610</strong></span>
+              </div>
+  
+              <div class="flex flex-row text-white">
+                <a class="flex flex-1 p-1 py-2 font-bold justify-center border-t-2 border-blue-800 bg-blue-700 hover:bg-blue-800" href="#"><i class="fa-solid fa-user"></i></a>
+                <a class="flex flex-1 p-1 py-2 font-bold justify-center border-t-2 border-red-800 bg-red-700 hover:bg-red-800 transition-all" href="#"><i class="fa-solid fa-right-from-bracket"></i></a>
+              </div>
+            </div>
+
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[60px] bg-blue-600 uppercase font-bold border-[3px] border-blue-800 rounded-md text-white p-4 transition-all duration-300 hover:bg-blue-800 hover:border-blue-900 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[70px]"><i class="fa-solid fa-coins"></i></span>
+              <span>Donar</span>
+            </a>
+  
+            <div class="grid grid-cols-4 gap-2 max-md:gap-1">
+              <a href="#" class="flex h-[45px] justify-center p-3 items-center rounded text-white text-2xl bg-black hover:scale-105 transition-all duration-200"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="#" class="flex h-[45px] justify-center p-3 items-center rounded border-2 border-red-800 text-white text-2xl bg-red-600 hover:bg-red-800 hover:scale-105 transition-all duration-200"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" class="flex h-[45px] justify-center p-3 items-center  rounded border-2 border-blue-800 text-white text-2xl bg-blue-600 hover:bg-blue-800 hover:scale-105 transition-all duration-200"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" class="flex h-[45px] justify-center p-3 items-center rounded border-2 border-pink-800 text-white text-2xl bg-gradient-to-b from-pink-600 to-orange-600 hover:scale-105 transition-all duration-200"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <div class="bg-blue-600 flex flex-col gap-3 p-2 w-full h-auto rounded border-[3px] border-blue-800">
+              <h1 class="text-white font-bold text-center">ESTADO DE SERVIDOR</h1>
+            
+              <ul class="flex flex-col gap-2 text-gray-800 content-center">
+                <li class="flex flex-row overflow-hidden items-center justify-between border-[1px] border-gray-900 bg-white pl-2 rounded-full">
+                  <span class="font-bold text-sm">Europa</span>
+                  <span class="text-green-800 bg-green-400 border-2 border-white px-2 rounded-full"><strong class="max-[950px]:hidden">Online</strong><strong class="min-[950px]:hidden">On</strong></span>
+                </li>
+                <li class="flex flex-row overflow-hidden items-center justify-between border-[1px] border-gray-900 bg-white pl-2 rounded-full">
+                  <span class="font-bold text-sm">Asia</span>
+                  <span class="text-red-800 bg-red-400 border-2 border-white px-2 rounded-full"><strong class="max-[950px]:hidden">Offline</strong><strong class="min-[950px]:hidden">Off</strong></span>
+                </li>
+                <li class="flex flex-row overflow-hidden items-center justify-between border-[1px] border-gray-900 bg-white pl-2 rounded-full">
+                  <span class="font-bold text-sm text-[12px]">Norteamérica</span>
+                  <span class="text-green-800 bg-green-400 border-2 border-white px-2 rounded-full"><strong class="max-[950px]:hidden">Online</strong><strong class="min-[950px]:hidden">On</strong></span>
+                </li>
+                <li class="flex flex-row overflow-hidden items-center justify-between border-[1px] border-gray-900 bg-white pl-2 rounded-full">
+                  <span class="font-bold text-sm">Sudamérica</span>
+                  <span class="text-red-800 bg-red-400 border-2 border-white px-2 rounded-full"><strong class="max-[950px]:hidden">Offline</strong><strong class="min-[950px]:hidden">Off</strong></span>
+                </li>
+              </ul>
+
+              <div class="bg-white border-[1px] border-gray-900 w-full h-auto rounded p-2">
+                <ul class="flex flex-col gap-2 text-sm">
+                  <li class="flex justify-between border-b-[1px] border-blue-950/40">
+                    <span class="font-bold text-gray-800">Conectados:</span>
+                    <span class="font-bold">2610</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="font-bold text-gray-800">Cuentas:</span>
+                    <span class="font-bold">2610</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span class="font-bold text-gray-800">Personajes:</span>
+                    <span class="font-bold">2610</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="bg-blue-600 p-2 w-full h-auto rounded border-[3px] border-blue-800">
+              <h1 class="text-white mb-3 font-bold text-center">RANKING</h1>
+            
+              <div class="flex flex-col justify-center bg-white rounded border-[1px] border-gray-950 p-2">
+                <ul class="flex flex-col gap-2 mb-3">
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-yellow-400 w-full">
+                      <span class="font-bold">1.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-yellow-800"><i class="fa-solid fa-shield"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-green-400 w-full">
+                      <span class="font-bold">2.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-green-800"><i class="fa-solid fa-wand-sparkles"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-pink-400 w-full">
+                      <span class="font-bold">3.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-pink-800"><i class="fa-solid fa-khanda"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-yellow-400 w-full">
+                      <span class="font-bold">4.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-yellow-800"><i class="fa-solid fa-shield"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-green-400 w-full">
+                      <span class="font-bold">5.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-green-800"><i class="fa-solid fa-wand-sparkles"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-yellow-400 w-full">
+                      <span class="font-bold">6.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-yellow-800"><i class="fa-solid fa-shield"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-yellow-400 w-full">
+                      <span class="font-bold">7.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-yellow-800"><i class="fa-solid fa-shield"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-pink-400 w-full">
+                      <span class="font-bold">3.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-pink-800"><i class="fa-solid fa-khanda"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-yellow-400 w-full">
+                      <span class="font-bold">9.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-yellow-800"><i class="fa-solid fa-shield"></i></span>
+                    </div>
+                  </li>
+                  <li class="flex flex-row justify-between items-center text-sm">
+                    <div class="flex flex-row p-1 px-3 rounded-full justify-between font-bold bg-green-400 w-full">
+                      <span class="font-bold">10.</span>
+                      <span class="text-gray-800">CoalsPlay</span>
+                      <span class="text-green-800"><i class="fa-solid fa-wand-sparkles"></i></span>
+                    </div>
+                  </li>
+                </ul>
+
+                <a href="#" class="text-center font-bold underline">Ver todos</a>
+              </div>
+            </div>
+
+          </aside>
+  
+          <section class="flex flex-col gap-3">
+
+            <div class="flex flex-col gap-3 max-sm:mt-2 items-center justify-end bg-orangeDB w-full p-2 border-2 border-orange-800 rounded">
+              
+              <picture class="h-[300px] w-full overflow-hidden relative">
+                <input type="radio" name="slider" id="slider1" checked class="peer/slider1 hidden">
+                <img src="./src/img/banner_3.jpg" alt="Imagen 3 slider" class="peer-checked/slider1:translate-y-[0] transition-transform duration-300 relative object-cover object-top w-full h-[300px] rounded border-2 border-orange-800" /> 
+                
+                <input type="radio" name="slider" id="slider2" class="peer/slider2 hidden">
+                <img src="./src/img/banner_1.jpg" alt="Imagen 3 slider" class="peer-checked/slider2:translate-y-[-300px] transition-transform duration-300 relative object-cover object-top w-full h-[300px] rounded border-2 border-orange-800" /> 
+                
+                <input type="radio" name="slider" id="slider3" class="peer/slider3 hidden">
+                <img src="./src/img/banner_2.jpg" alt="Imagen 3 slider" class="peer-checked/slider3:translate-y-[-600px] transition-transform duration-300 relative object-cover object-top w-full h-[300px] rounded border-2 border-orange-800" />
+              </picture>
+
+              <div class="flex flex-row justify-center gap-3 btn-slider-container">
+                <label for="slider1" class="btn-slider"></label>
+                <label for="slider2" class="btn-slider"></label>
+                <label for="slider3" class="btn-slider"></label>
+              </div>
+            </div>
+
+            <div class="w-full">
+
+              <div class="grid grid-cols-4 items-end w-full h-auto">
+                
+                <label for="all" class="tab_active btn-tab">Todo</label>
+                <label for="server" class="btn-tab">Servidor</label>
+                <label for="events" class="btn-tab">Eventos</label>
+                <label for="others" class="btn-tab">Otros</label>
+
+              </div>
+
+              <div class="flex  flex-col justify-between bg-cyan-200 w-full h-[400px] overflow-hidden text-gray-700 py-3 px-6 border-2 border-cyan-600 rounded-es rounded-ee">
+                
+                <input type="radio" class="peer/all allTab hidden" checked name="tabs" id="all">
+                <ul class="peer-checked/all:flex hidden transition-all duration-300 flex-col gap-3">
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Todo] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                </ul>
+
+                <input type="radio" class="peer/server hidden" name="tabs" id="server">
+                <ul class="flex-col hidden  peer-checked/server:flex transition-all duration-300">
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Servidor] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Servidor] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Servidor] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row flex-wrap justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Servidor] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                </ul>
+
+                <input type="radio" class="peer/events hidden" name="tabs" id="events">
+                <ul class="hidden peer-checked/events:flex flex-col gap-3">
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Eventos] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                  <li class="flex flex-row justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Eventos] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                </ul>
+
+                <input type="radio" class="peer/others hidden" name="tabs" id="others">
+                <ul class="hidden peer-checked/others:flex flex-col gap-3">
+                  <li class="flex flex-row overflow-hidden justify-between border-b-[1px] border-cyan-500">
+                    <a href="#" class="font-bold">[Otros] Apertura del servidor...</a>
+                    <span>09/10/2023 10:26</span>
+                  </li>
+                </ul>
+                
+                <div class="mt-5 flex flex-row gap-2">
+                  <a href="#" class="bg-cyan-600 rounded border-2 hover:bg-cyan-700 transition-[background] duration-300 border-cyan-700 px-2 py-1 font-bold text-white text-xs">1</a>
+                  <a href="#" class="bg-cyan-500 rounded border-2 hover:bg-cyan-700 transition-[background] duration-300 border-cyan-700 px-2 py-1 font-bold text-white text-xs">2</a>
+                  <a href="#" class="bg-cyan-500 rounded border-2 hover:bg-cyan-700 transition-[background] duration-300 border-cyan-700 px-2 py-1 font-bold text-white text-xs">3</a>
+                  <a href="#" class="bg-cyan-500 rounded border-2 hover:bg-cyan-700 transition-[background] duration-300 border-cyan-700 px-2 py-1 font-bold text-white text-xs">...</a>
+                  <a href="#" class="bg-cyan-500 rounded border-2 hover:bg-cyan-700 transition-[background] duration-300 border-cyan-700 px-2 py-1 font-bold text-white text-xs">99</a>
+                </div>
+              </div>
+            </div>
+
+            <section class="flex flex-col mb-[10px] gap-2 bg-blue-600 w-full md:hidden h-auto rounded border-2 p-2 border-blue-950">
+              <h2 class="text-white font-bold text-[13px] text-center">Últimas ofertas</h2>
+              <div class="flex flex-col items-center bg-blue-200 rounded w-full h-full">
+                <span class="text-[13px] font-bold bg-blue-500 w-full text-center text-white uppercase p-1">Cápsula de teletransporte</span>
+                <div class="bg-[url('../img/item_1.jpg')] bg-cover w-[80px] h-[80px]"></div>
+                <span class="bg-blue-500 font-bold text-center text-white p-1 px-3 w-full">600 <small class="line-through text-red-900">1200</small> créditos</span>
+              </div>
+            </section>
+
+          </section>
+  
+          <aside class="flex max-md:hidden flex-col max-md:mt-2 gap-3">
+            
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-green-600 uppercase font-bold border-[3px] border-green-800 rounded-md text-white p-4 transition-all duration-300 hover:bg-green-800 hover:border-green-900 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-download"></i></span>
+              <span>Descarga</span>
+            </a>
+
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-yellow-500 uppercase font-bold border-[3px] border-yellow-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-yellow-700 hover:border-yellow-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-circle-info"></i></span>
+              <span>Guías</span>
+            </a>
+
+            <a href="#" class="group text-right flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-purple-500 uppercase font-bold border-[3px] border-purple-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-purple-700 hover:border-purple-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+              <span class=" text-[11px]">Herramientas</span>
+            </a>
+
+            <a href="#" class="group flex text-right flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-red-500 uppercase font-bold border-[3px] border-red-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-red-700 hover:border-red-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-bug"></i></span>
+              <span class="text-[11px]">Reporte de bugs</span>
+            </a>
+
+            <a href="#" class="group flex flex-row items-center justify-between overflow-hidden w-full h-[50px] bg-cyan-500 uppercase font-bold border-[3px] border-cyan-700 rounded-md text-white p-4 transition-all duration-300 hover:bg-cyan-700 hover:border-cyan-800 hover:scale-105">
+              <span class="group-hover:rotate-[-10deg] group-hover:scale-[1.3] transition-all duration-300 text-[50px]"><i class="fa-solid fa-users"></i></span>
+              <span>Foro</span>
+            </a>
+
+            <section class="flex flex-col gap-2 bg-blue-600 w-full h-auto rounded border-2 p-2 border-blue-950">
+              <h2 class="text-white font-bold uppercase text-[13px] text-center">Últimas ofertas</h2>
+              <div class="flex flex-col items-center border-[1px] border-blue-950 bg-blue-200 w-full h-full">
+                <span class="text-[13px] font-bold bg-blue-500 w-full text-center text-white uppercase p-1">Cápsula de teletransporte</span>
+                <img src="./src/img/item_1.jpg" alt="Imagen Item1" class="w-[80px] h-[80px] object-cover ">
+                <span class="bg-blue-500 font-bold text-center text-white p-1 px-3 w-full">600 <small class="line-through text-red-900">1200</small> créditos</span>
+              </div>
+            </section>
+
+          </aside>
+
+        </div>
+
+        <div class="md:bg-bgFooter md:bg-center md:h-[60px] md:bg-no-repeat md:w-full md:mx-auto"></div>
+
+        <footer class="text-center text-gray-800 py-5 h-auto">
+          <p>Copyright © 2023 Dragon Ball Online. Todos los derechos reservados. Por <a class="underline font-bold" href="#">CoalsPlay</a></p>
+        </footer>
+        
+      </div>
+
+    </main>
+
+  </body>
+</html>

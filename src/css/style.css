@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .btn-slider {
+    @apply h-[20px] w-[20px] cursor-pointer border-2 border-orange-800 hover:bg-yellow-400 bg-yellow-600 transition-[background] duration-300 rounded-full
+  }
+
+  .slider_active {
+    @apply bg-yellow-400
+  }
+
+  .btn-tab {
+    @apply flex hover:h-[50px] transition-all duration-300 h-[40px] items-center cursor-pointer bg-cyan-500 hover:bg-cyan-600 justify-center p-3 border-2 border-cyan-700 text-center rounded-ss rounded-se font-bold text-white
+  }
+
+  .tab_active {
+    @apply bg-cyan-600 h-[50px]
+  }
+
+}
